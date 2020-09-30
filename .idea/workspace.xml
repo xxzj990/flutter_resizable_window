@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aaadc29-5b33-4233-bd3c-a7db3271d8a5" name="Default Changelist" comment="" />
+    <list default="true" id="3aaadc29-5b33-4233-bd3c-a7db3271d8a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/src/resizable_window_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/resizable_window.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/resizable_window.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/resizable_window_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/resizable_window_web.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/resizable_window_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/resizable_window_test.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="P4M0215403004438" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iDieGlVt8qoe2HYOY8QNyrmUkI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,8 +31,16 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\flutter\resizable_window\lib\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web\flutter\resizable_window\lib" />
+    </key>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -30,5 +51,27 @@
       <updated>1601448656599</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601449409244">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="690" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1601449409244" />
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1601449853111">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1601449853111" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1601449853111">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1601449853111" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1601449853111">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1601449853111" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1601449853111">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1601449853111" />
   </component>
 </project>
