@@ -25,12 +25,13 @@ class _MyAppState extends State<MyApp> {
         ),
         body: ResizableWindowView(
           hasAppbar: true,
+          leftChild: Container(
+            color: Colors.deepOrangeAccent,
+          ),
           topRightChild: Container(
-            width: 10,
             color: Colors.green,
           ),
           bottomRightChild: Container(
-            width: 10,
             color: Colors.indigoAccent,
           ),
         ),

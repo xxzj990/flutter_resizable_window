@@ -24,6 +24,7 @@ class ResizableWindowView extends StatefulWidget {
 
 class _ResizableWindowViewState extends State<ResizableWindowView> {
   static const double barWeight = 10.0;
+  static const Color barColor = Colors.white;
 
   double leftWidth = 200.0;
   double topHeight = 200.0;
@@ -52,33 +53,106 @@ class _ResizableWindowViewState extends State<ResizableWindowView> {
       }
     }
 
+    double appbarHeight = 0.0;
+    if (widget.hasAppbar) {
+      appbarHeight = AppBar().preferredSize.height;
+    }
+
     return Row(
       children: [
-        this.widget.leftChild == null ? Container() : this.widget.leftChild,
-        Column(
-          children: [
-            this.widget.topRightChild == null
-                ? Container()
-                : SizedBox(
-                    height: topHeight,
-                    width: MediaQuery.of(context).size.width - leftWidth,
-                    child: this.widget.topRightChild,
-                  ),
-            (widget.topRightChild == null || widget.bottomRightChild == null)
-                ? Container()
-                : SizedBox(
-                    width: MediaQuery.of(context).size.width - leftWidth,
-                    height: barWeight,
-                    child: verBar(widget.hasAppbar ? AppBar().preferredSize.height : 0),
-                  ),
-            this.widget.bottomRightChild == null
-                ? Container()
-                : SizedBox(
-                    height: MediaQuery.of(context).size.height - topHeight - barWeight - AppBar().preferredSize.height,
-                    width: MediaQuery.of(context).size.width - leftWidth,
-                    child: this.widget.bottomRightChild,
-                  ),
-          ],
+        widget.leftChild == null
+            ? Container()
+            : SizedBox(
+                width: leftWidth,
+                child: this.widget.leftChild,
+              ),
+        (widget.leftChild == null || (widget.topRightChild == null && widget.bottomRightChild == null)) ? Container() : horBar(appbarHeight),
+        Expanded(
+          child: Column(
+            children: [
+              this.widget.topRightChild == null
+                  ? Container()
+                  : SizedBox(
+                      height: topHeight,
+                      child: this.widget.topRightChild,
+                    ),
+              (widget.topRightChild == null || widget.bottomRightChild == null) ? Container() : verBar(appbarHeight),
+              Expanded(
+                child: this.widget.bottomRightChild == null ? Container() : this.widget.bottomRightChild,
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  horBar(double appbarHeight) {
+    return MouseRegion(
+      cursor: SystemMouseCursors.resizeColumn,
+      child: Draggable(
+        axis: Axis.horizontal,
+        affinity: Axis.horizontal,
+        onDragEnd: (detail) {
+          print('offset:${detail.offset}');
+          setState(() {
+            double startOffset = leftWidth;
+            double newW = leftWidth + detail.offset.dx - startOffset;
+            print('newW:$newW');
+            if (newW > 0) {
+              leftWidth = newW;
+            }
+          });
+        },
+        child: horBarChild(appbarHeight),
+        feedback: horBarChild(appbarHeight),
+        childWhenDragging: horBarChildMask(appbarHeight),
+      ),
+    );
+  }
+
+  horBarChild(double appbarHeight) {
+    return Container(
+      color: barColor,
+      width: barWeight,
+      height: MediaQuery.of(context).size.height - appbarHeight,
+      alignment: Alignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          buildDot(),
+          SizedBox(height: 2),
+          buildDot(),
+          SizedBox(height: 2),
+          buildDot(),
+        ],
+      ),
+    );
+  }
+
+  horBarChildMask(double appbarHeight) {
+    return Stack(
+      children: [
+        Container(
+          color: barColor,
+          width: barWeight,
+          height: MediaQuery.of(context).size.height - appbarHeight,
+          alignment: Alignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildDot(),
+              SizedBox(height: 2),
+              buildDot(),
+              SizedBox(height: 2),
+              buildDot(),
+            ],
+          ),
+        ),
+        Container(
+          color: Colors.black.withOpacity(0.2),
+          width: barWeight,
+          height: MediaQuery.of(context).size.height - appbarHeight,
         ),
       ],
     );
@@ -89,7 +163,7 @@ class _ResizableWindowViewState extends State<ResizableWindowView> {
       cursor: SystemMouseCursors.resizeRow,
       child: Draggable(
         axis: Axis.vertical,
-        onDragStarted: () {},
+        affinity: Axis.vertical,
         onDragEnd: (detail) {
           print('offset:${detail.offset}');
           setState(() {
@@ -101,15 +175,67 @@ class _ResizableWindowViewState extends State<ResizableWindowView> {
             }
           });
         },
-        child: Container(
-          color: Colors.grey,
+        child: verBarChild(),
+        feedback: verBarChild(),
+        childWhenDragging: verBarChildWithMask(),
+      ),
+    );
+  }
+
+  verBarChild() {
+    return Container(
+      color: barColor,
+      height: barWeight,
+      width: MediaQuery.of(context).size.width - leftWidth - barWeight,
+      alignment: Alignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          buildDot(),
+          SizedBox(width: 2),
+          buildDot(),
+          SizedBox(width: 2),
+          buildDot(),
+        ],
+      ),
+    );
+  }
+
+  verBarChildWithMask() {
+    return Stack(
+      children: [
+        Container(
+          color: barColor,
           height: barWeight,
+          width: MediaQuery.of(context).size.width - leftWidth - barWeight,
+          alignment: Alignment.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildDot(),
+              SizedBox(width: 2),
+              buildDot(),
+              SizedBox(width: 2),
+              buildDot(),
+            ],
+          ),
         ),
-        feedback: Container(
-          color: Colors.red,
-          width: MediaQuery.of(context).size.width,
+        Container(
+          color: Colors.black.withOpacity(0.2),
           height: barWeight,
+          width: MediaQuery.of(context).size.width - leftWidth - barWeight,
         ),
+      ],
+    );
+  }
+
+  buildDot() {
+    return Container(
+      width: 4,
+      height: 4,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(2),
+        color: Color(0xff999999),
       ),
     );
   }
