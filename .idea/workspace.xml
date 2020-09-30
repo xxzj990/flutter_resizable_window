@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aaadc29-5b33-4233-bd3c-a7db3271d8a5" name="Default Changelist" comment="top bootom">
+    <list default="true" id="3aaadc29-5b33-4233-bd3c-a7db3271d8a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/resizable_window_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/resizable_window_view.dart" afterDir="false" />
@@ -54,41 +54,49 @@
       <option name="project" value="LOCAL" />
       <updated>1601449924132</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="left &amp;&amp; style">
+      <created>1601453705508</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601453705508</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="top bootom" />
-    <option name="LAST_COMMIT_MESSAGE" value="top bootom" />
+    <MESSAGE value="left &amp;&amp; style" />
+    <option name="LAST_COMMIT_MESSAGE" value="left &amp;&amp; style" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601449409244">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="690" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1601449409244" />
-    <state x="222" y="148" width="1587" height="813" key="CommitChangelistDialog2" timestamp="1601452582563">
+    <state x="222" y="148" width="1587" height="813" key="CommitChangelistDialog2" timestamp="1601453704796">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="222" y="148" width="1587" height="813" key="CommitChangelistDialog2/0.30.1920.1050@0.30.1920.1050" timestamp="1601452582563" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1601453632082">
+    <state x="222" y="148" width="1587" height="813" key="CommitChangelistDialog2/0.30.1920.1050@0.30.1920.1050" timestamp="1601453704796" />
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1601454657660">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1601453632082" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1601453632082">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1601454657660" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1601454657659">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1601453632082" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1601453632081">
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1601454657659" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1601454657659">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1601453632081" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1601453632082">
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1601454657659" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1601454657660">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1601453632082" />
-    <state width="300" height="105" key="javadoc.popup.new" timestamp="1601453613933">
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1601454657660" />
+    <state width="300" height="105" key="javadoc.popup.new" timestamp="1601454604309">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="300" height="105" key="javadoc.popup.new/0.30.1920.1050@0.30.1920.1050" timestamp="1601453613933" />
+    <state width="300" height="105" key="javadoc.popup.new/0.30.1920.1050@0.30.1920.1050" timestamp="1601454604309" />
   </component>
 </project>

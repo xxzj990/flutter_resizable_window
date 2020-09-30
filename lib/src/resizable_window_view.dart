@@ -9,8 +9,12 @@ class ResizableWindowView extends StatefulWidget {
     this.bottomRightChild,
     this.hasAppbar = false,
   })  : assert(leftChild != null || topRightChild != null || bottomRightChild != null),
+        assert(leftChild is ScrollView || leftChild is SingleChildScrollView),
+        assert(topRightChild is ScrollView || topRightChild is SingleChildScrollView),
+        assert(bottomRightChild is ScrollView || bottomRightChild is SingleChildScrollView),
         super(key: key);
 
+  // child must be scrollview
   final Widget leftChild;
   final Widget topRightChild;
   final Widget bottomRightChild;

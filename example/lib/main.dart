@@ -25,14 +25,39 @@ class _MyAppState extends State<MyApp> {
         ),
         body: ResizableWindowView(
           hasAppbar: true,
-          leftChild: Container(
-            color: Colors.deepOrangeAccent,
+          leftChild: SingleChildScrollView(
+            child: Container(
+              color: Colors.deepOrangeAccent,
+              height: 600,
+            ),
           ),
-          topRightChild: Container(
-            color: Colors.green,
+          topRightChild: ListView(
+            children: [
+              Container(
+                color: Colors.green,
+                height: 100,
+              ),
+              Container(
+                color: Colors.black,
+                height: 200,
+              ),
+            ],
           ),
-          bottomRightChild: Container(
-            color: Colors.indigoAccent,
+          bottomRightChild: ListView(
+            children: [
+              Container(
+                color: Colors.indigoAccent,
+                height: 300,
+              ),
+              Container(
+                color: Colors.deepOrangeAccent,
+                height: 300,
+              ),
+              Container(
+                color: Colors.pink,
+                height: 300,
+              ),
+            ],
           ),
         ),
       ),
